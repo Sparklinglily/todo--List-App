@@ -76,13 +76,16 @@ class _WebViewPageState extends State<WebViewPage> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
         NavigationDelegate(
-          onProgress: (int progess) {
+          onPageStarted: (url) {
+            setState(() {
+              isLoading = true;
+            });
+          },
+          onPageFinished: (url) {
             setState(() {
               isLoading = false;
             });
           },
-          onPageStarted: (String url) {},
-          onPageFinished: (String url) {},
         ),
       )
       ..loadRequest(Uri.parse('https://github.com/Sparklinglily'));
