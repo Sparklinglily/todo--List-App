@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:todo_list/homePage.dart';
 import 'package:todo_list/model.dart';
+import 'package:todo_list/wmtfirstProject.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: TypedText(),
     );
   }
 }
