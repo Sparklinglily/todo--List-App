@@ -21,7 +21,6 @@ class _SettingsPageState extends State<SettingsPage> {
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
       final themeMode = themeProvider.themeMode;
       return Scaffold(
-        backgroundColor: Color.fromARGB(255, 231, 231, 231),
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: const Center(
@@ -36,9 +35,10 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Column(
               children: [
                 RadioListTile(
+                    fillColor:
+                        MaterialStateColor.resolveWith((states) => Colors.blue),
                     title: const Text(
                       'Device Settings',
-                      style: TextStyle(color: Colors.black),
                     ),
                     value: ThemeMode.system,
                     groupValue: themeMode,
@@ -46,6 +46,8 @@ class _SettingsPageState extends State<SettingsPage> {
                       await themeProvider.switchTheme(selectedTheme);
                     }),
                 RadioListTile(
+                    fillColor:
+                        MaterialStateColor.resolveWith((states) => Colors.blue),
                     title: const Text('Light mode'),
                     value: ThemeMode.light,
                     groupValue: themeMode,
@@ -53,6 +55,8 @@ class _SettingsPageState extends State<SettingsPage> {
                       await themeProvider.switchTheme(selectedTheme);
                     }),
                 RadioListTile(
+                    fillColor:
+                        MaterialStateColor.resolveWith((states) => Colors.blue),
                     title: const Text('Dark mode'),
                     value: ThemeMode.dark,
                     groupValue: themeMode,

@@ -37,6 +37,7 @@ class ThemeProvider with ChangeNotifier {
   Future<void> switchTheme(ThemeMode? selectedTheme) async {
     if (selectedTheme == ThemeMode.system) {
       _themeMode = ThemeMode.system;
+      notifyListeners();
     } else {
       _themeMode = selectedTheme;
       notifyListeners();
