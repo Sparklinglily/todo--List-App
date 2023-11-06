@@ -41,8 +41,8 @@ class _TypedTextState extends State<TypedText> {
                   typedText = text;
                 });
               },
-              decoration: InputDecoration(border: OutlineInputBorder()),
-            )
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+            ),
           ],
         ),
       ),
