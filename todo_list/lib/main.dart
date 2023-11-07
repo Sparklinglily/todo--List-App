@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               )))
           : ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home: const SettingsPage(),
+      home: const ThemeScreen(),
     );
   }
 }

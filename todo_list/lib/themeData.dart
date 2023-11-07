@@ -9,7 +9,7 @@ class DarkThemeColors {
   static const Color secondaryText = Color.fromARGB(255, 151, 144, 144);
 }
 
-class ThemeProvider with ChangeNotifier {
+class ThemeProvider extends ChangeNotifier {
   ThemeMode? _themeMode = ThemeMode.system;
 
   ThemeMode? get themeMode => _themeMode;
@@ -48,21 +48,6 @@ class ThemeProvider with ChangeNotifier {
 
       prefs.setBool('isDarkTheme', _themeMode == ThemeMode.dark);
       notifyListeners();
-    }
-  }
-
-  ThemeData getThemeData() {
-    if (themeMode == ThemeMode.dark) {
-      return ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: Colors.black,
-          primaryColor: Colors.white,
-          textTheme: const TextTheme(
-            bodyMedium: TextStyle(
-              color: DarkThemeColors.secondaryText,
-            ),
-          ));
-    } else {
-      return ThemeData.light();
     }
   }
 }

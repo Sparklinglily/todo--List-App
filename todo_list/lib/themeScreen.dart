@@ -2,20 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_list/themeData.dart';
 
-class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key});
+class ThemeScreen extends StatefulWidget {
+  const ThemeScreen({super.key});
 
   @override
-  State<SettingsPage> createState() => _SettingsPageState();
+  State<ThemeScreen> createState() => _ThemeScreenState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
-  // bool firstValue = true;
-  // bool secondValue = true;
-  // bool thirdValue = true;
-
-  // int? onClicked;
-
+class _ThemeScreenState extends State<ThemeScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
