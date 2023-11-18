@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                 color: DarkThemeColors.secondaryText,
               )))
           : ThemeData.light(),
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: const ThemeScreen(),
     );
   }

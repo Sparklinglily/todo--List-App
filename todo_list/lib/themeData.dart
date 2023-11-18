@@ -3,7 +3,7 @@ import 'dart:ui' as ui;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DarkThemeColors {
-  static const Color background = Color.fromARGB(255, 32, 32, 32);
+  static const Color scaffoldBackground = Color.fromARGB(255, 32, 32, 32);
 
   static const Color primaryText = Color.fromARGB(255, 255, 255, 255);
   static const Color secondaryText = Color.fromARGB(255, 151, 144, 144);
